@@ -25,6 +25,15 @@ import java.util.List;
 )
 public class GameModeCommand extends ModuleCommandExecutor {
 
+    /**
+     * This function is called when a player uses the /gamemode command
+     *
+     * @param commandSender The command sender.
+     * @param command The command that was used.
+     * @param s The command name.
+     * @param strings The arguments that were passed to the command.
+     * @return Nothing.
+     */
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, String[] strings) {
         if(commandSender instanceof Player player) {
@@ -82,6 +91,11 @@ public class GameModeCommand extends ModuleCommandExecutor {
         return false;
     }
 
+    /**
+     * It returns a list of strings that are the names of all the players on the server
+     *
+     * @return A list of strings.
+     */
     @Override
     public List<String> getTabCompletions(String[] args) {
         List<String> completions = new ArrayList<>();
